@@ -50,7 +50,7 @@ jobs:
           name: firmware
           path: quefrency_left_nice_nano.uf2
       - name: West Build (Quefrency65 Right)
-        run: west build -s zmk/app -b nice_nano -- -DSHIELD=quefrency_right -DZMK_CONFIG=/github/workspace/config
+        run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD=quefrency_right -DZMK_CONFIG=/github/workspace/config
       - name: Quefrency65 Right Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
