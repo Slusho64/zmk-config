@@ -49,3 +49,5 @@
         };
     };
 };
+
+&kscan0 { debounce-period = <7>; };
