@@ -30,21 +30,21 @@
             >;
         };
 
-// ----------------------------------------------     -----------------------------------------------------
-// |BT_CLR|  F1  |  F2 |  F3  |  F4 |  F5 |  F6 |     |  F7 |  F8 |  F9 | F10 | F11 | F12 |        | HOME | 
-// |       | BT-0 | BT-1| BT-2 |     |     |       |     |     |     |     |     |     |     |     | PGUP |
-// |        |      |     |      |     |     |       |     |     |     |     |     |     |          | PGDN |
-// |         |      |     |     |      |     |       |     |     |     |     |     |         |     | END  |
-// |         |      |      |           |     |       |             |      |    |       |     |     |      |
-// -------------------------------------------       ------------------------------------------------------
+// ----------------------------------------------       -----------------------------------------------------
+// |BT_CLR|  F1  |  F2 |  F3  |  F4 |  F5 |  F6 |       |  F7 |  F8 |  F9 | F10 | F11 | F12 |        | HOME | 
+// |       |      |     |  UP  |     |     |         |     |     | INS |     |PAUSE|     |     |     | PGUP |
+// |        |      |  LFT |  DWN | RGHT |     |       |     |     |     |     |     |     |          | PGDN |
+// |         | BT-0 | BT-1 | BT-2 |      |     |       |     |     |     |     |     |         |     | END  |
+// |         |      |      |           |     |         |             |      |    |       |     |     |      |
+// -------------------------------------------         ------------------------------------------------------
 
         fn_layer {
             bindings = <
-    &bt BT_CLR &kp F1       &kp F2       &kp F3       &kp F4 &kp F5 &kp F6 /**/ &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &trans &kp HOME
-    &trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &trans        /**/ &trans &trans &trans &trans  &trans  &trans  &trans &trans &kp PGUP
-    &trans     &trans       &trans       &trans       &trans &trans        /**/ &trans &trans &trans &trans  &trans  &trans  &trans &kp PGDN
-    &trans     &trans       &trans       &trans       &trans &trans        /**/ &trans &trans &trans &trans  &trans  &trans  &trans &kp END
-    &trans     &trans       &trans       &trans       &trans               /**/ &trans &trans &trans &trans  &trans  &trans  &trans       
+    &bt BT_CLR &kp F1       &kp F2       &kp F3       &kp F4   &kp F5 &kp F6 /**/ &kp F7 &kp F8 &kp F9  &kp F10 &kp F11          &kp F12 &trans &kp HOME
+    &trans     &trans       &trans       &kp UARW     &trans   &trans        /**/ &trans &trans &kp INS &trans  &kp PAUSE_BREAK  &trans  &trans &trans   &kp PGUP
+    &trans     &trans       &kp LARW     &kp DARW     &kp RARW &trans        /**/ &trans &trans &trans  &trans  &trans           &trans  &trans &kp PGDN
+    &trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans   &trans        /**/ &trans &trans &trans  &trans  &trans           &trans  &trans &kp END
+    &trans     &trans       &trans       &trans       &trans                 /**/ &trans &trans &trans  &trans  &trans           &trans  &trans       
             >;
         };
     };
